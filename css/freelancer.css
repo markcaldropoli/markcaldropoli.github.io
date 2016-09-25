@@ -31,8 +31,8 @@ h6 {
   text-transform: uppercase;
   font-weight: 700;
 }
-hr.cog-light,
-hr.cog-primary {
+hr.star-light,
+hr.star-primary {
   padding: 0;
   border: none;
   border-top: solid 5px;
@@ -40,8 +40,8 @@ hr.cog-primary {
   max-width: 250px;
   margin: 25px auto 30px;
 }
-hr.cog-light:after,
-hr.cog-primary:after {
+hr.star-light:after,
+hr.star-primary:after {
   content: "\f005";
   font-family: FontAwesome;
   display: inline-block;
@@ -50,10 +50,10 @@ hr.cog-primary:after {
   font-size: 2em;
   padding: 0 0.25em;
 }
-hr.cog-light {
+hr.star-light {
   border-color: white;
 }
-hr.cog-light:after {
+hr.star-light:after {
   background-color: #18BC9C;
   color: white;
 }
