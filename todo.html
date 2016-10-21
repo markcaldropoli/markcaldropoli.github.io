@@ -23,11 +23,15 @@ body {
 function addItem() {
   var inputBox = document.getElementById("input-box");
   var text = inputBox.value;
+  inputBox.value = "";
   var newitem = document.createElement('div');
   newitem.innerHTML = text;
   newitem.className = "item";
   var deleteButton = document.createElement('button');
   deleteButton.innerText = "X";
+  deleteButton.addEventListener("click", function() {
+    this.parentElement.style.display = "none";
+  });
   newitem.appendChild(deleteButton);
   var todoContainer = document.getElementById('to-do-container');
   todoContainer.appendChild(newitem);
