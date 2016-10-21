@@ -24,6 +24,7 @@ function addItem() {
   var inputBox = document.getElementById("input-box");
   var text = inputBox.value;
   inputBox.value = "";
+  console.log(text);
   var newitem = document.createElement('div');
   newitem.innerHTML = text;
   newitem.className = "item";
