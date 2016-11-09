@@ -4,7 +4,10 @@
 
 This website was created by and is maintained by Mark Caldropoli
 
+* [GitHub](https://github.com/markcaldropoli)
+* [Hackers vs. Harassment](hackersvsharassment.github.io)
 * [LinkedIn](https://www.linkedin.com/in/markcaldropoli)
+* [nyctreats](nyctreats.github.io)
 
 ## Bootstrap Copyright and License
 
