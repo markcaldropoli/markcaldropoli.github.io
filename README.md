@@ -4,7 +4,7 @@
 
 This website was created by and is maintained by Mark Caldropoli
 
-* https://linkedin.com/markcaldropoli
+* [LinkedIn](https://www.linkedin.com/in/markcaldropoli)
 
 ## Bootstrap Copyright and License
 
