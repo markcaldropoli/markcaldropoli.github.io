@@ -2,7 +2,7 @@
 
 ## Creator
 
-This website was created by and is maintained by **[Mark Caldropoli]
+This website was created by and is maintained by Mark Caldropoli
 
 * https://linkedin.com/markcaldropoli
 
