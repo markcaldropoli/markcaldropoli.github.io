@@ -1872,6 +1872,7 @@ fieldset[disabled] .input-group-btn .btn-default.active {
   min-height: 53px;
   border: none;
   border-radius: 6px;
+  position: fixed;
 }
 @media (min-width: 768px) {
   .navbar-header {
