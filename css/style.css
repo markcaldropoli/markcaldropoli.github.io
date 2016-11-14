@@ -55,7 +55,9 @@ http://www.andreagalanti.it
   font-weight: normal;
   font-style: normal;
 }
-
+.img-circle {
+    border-radius: 50%;
+}
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
   font-family: 'Flat-UI-Icons';
