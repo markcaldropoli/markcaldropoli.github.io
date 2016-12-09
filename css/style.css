@@ -8,7 +8,7 @@ http://www.andreagalanti.it
 
 @font-face {
 	font-family: "IgnorelandA"
-	src: url(../fonts/IgnorelandA.ttf);
+	src: url("../fonts/IgnorelandA.ttf");
 }
 @font-face {
   font-family: 'Lato';
