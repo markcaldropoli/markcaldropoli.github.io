@@ -5,7 +5,11 @@ Bootstrap Version
 Build: 1.0
 http://www.andreagalanti.it
 */
-
+@font-face {
+	font-family: "A_Love_of_Thunder";
+	src: url(../fonts/A_Love_of_Thunder.ttf);
+	font-style: normal;
+}
 @font-face {
 	font-family: 'IgnorelandA';
 	src: url('../fonts/IgnorelandA.ttf');
