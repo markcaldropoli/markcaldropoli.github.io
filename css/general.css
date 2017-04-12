@@ -369,7 +369,8 @@ color: #ECEBEB;
 .content-style-form label {
 	display: block;
 	padding: 10px 0 0;
-	color: #34495e;
+	/*color: #34495e;*/
+	color: #4CA07A;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: bold;
