@@ -137,7 +137,7 @@ Copyright (c) 2013 Daniel Eden
 
 .name:hover {
   -webkit-animation: pulse .9s;
-  animation-name: pulse .9s;
+  animation: pulse .9s;
 }
 
 @-webkit-keyframes rubberBand {
