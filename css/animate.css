@@ -373,8 +373,8 @@ Copyright (c) 2013 Daniel Eden
 }
 
 .icon:hover {
-  -webkit-animation: tada infinite;
-  animation: tada infinite;
+  -webkit-animation: tada infinite 1s;
+  animation: tada infinite 1s;
 }
 
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
