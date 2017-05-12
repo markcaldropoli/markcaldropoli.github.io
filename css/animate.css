@@ -91,6 +91,11 @@ Copyright (c) 2013 Daniel Eden
   animation-name: flash;
 }
 
+.flash:hover {
+  -webkit-animation: flash .9s;
+  animation: flash .9s;
+}
+
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
 @-webkit-keyframes pulse {
