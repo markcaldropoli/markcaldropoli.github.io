@@ -1,0 +1,56 @@
+.brand {
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-color: #81d2e0;
+  color: #0000;
+  font-family: var(--font-display), "Times New Roman", "Segoe UI", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  line-height: 2rem;
+  display: inline-block;
+  transform-origin: center;
+  will-change: transform;
+  transition: transform 160ms ease-out;
+}
+
+.brand:hover {
+  animation: brand-pulse 1400ms ease-in-out 1 forwards;
+}
+
+@keyframes brand-pulse {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.12); }
+  70%  { transform: scale(0.98); }
+  100% { transform: scale(1); }
+}
+
+.nav {
+  align-items: center;
+  background-color: #ffffff08;
+  border-color: #ffffff1a;
+  border-radius: 9999px;
+  border-width: 1px;
+  gap: 0.5rem;
+}
+
+.nav button {
+  border-color: #0000;
+  border-width: 1px;
+  border-radius: 9999px;
+  color: rgb(203 213 225);
+}
+
+.social-icon {
+  border-width: 1px;
+}
+
+.github-icon:hover {
+  background: linear-gradient(to right, black, #24292e) border-box;
+  border: 1px solid transparent;
+}
+
+.linkedin-icon:hover {
+  background: linear-gradient(to right, #0a66c2, #0077B5) border-box;
+  border: 1px solid transparent;
+}
