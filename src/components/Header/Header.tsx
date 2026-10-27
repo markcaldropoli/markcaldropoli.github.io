@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
-import { Github, Linkedin } from "react-bootstrap-icons";
+import { Envelope, Github, Linkedin } from "react-bootstrap-icons";
 import './Header.scss';
 
 const navItems = [
@@ -10,9 +10,9 @@ const navItems = [
 
 const Header: React.FC = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50" role="banner">
-      <div className="max-w-7xl mx-auto px-4 pt-4">
-        <div className="flex justify-between">
+    <header className="portfolio-header fixed top-0 left-0 right-0 z-50" role="banner">
+      <div className="max-w-7xl mx-auto px-4 py-4">
+        <div className="flex items-center justify-between">
           <button
             className="brand"
             onClick={() => {
@@ -38,6 +38,10 @@ const Header: React.FC = () => {
             ))}
           </nav>
           <div className="flex items-center gap-3">
+            <a href="mailto:markcaldropoli@gmail.com" aria-label="Email Mark"
+              className="social-icon email-icon px-2 py-2 rounded-full bg-white/[0.04] border-white/15 flex items-center justify-center">
+              <Envelope size={30} color="var(--portfolio-muted)" />
+            </a>
             <a href="https://github.com/markcaldropoli" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
               className="social-icon github-icon px-2 py-2 rounded-full bg-white/[0.04] border-white/15 flex items-center justify-center"
             >

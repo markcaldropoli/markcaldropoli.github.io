@@ -1,3 +1,413 @@
 .experience-container {
-    height: 100vh;
+    border-top: 1px solid rgb(233 243 248 / 8%);
+    padding-top: 5.5rem;
+    padding-bottom: 1.5rem;
+    scroll-margin-top: 2rem;
+}
+
+.experience-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.52fr);
+    gap: 3rem;
+    align-items: end;
+    margin-bottom: 2.25rem;
+}
+
+.experience-heading .section-kicker {
+    margin: 0 0 0.65rem;
+}
+
+.experience-heading h2 {
+    margin: 0;
+    color: var(--portfolio-ink);
+    font-family: var(--font-display), sans-serif;
+    font-size: clamp(2.6rem, 4.4vw, 4.25rem);
+    font-weight: 650;
+    line-height: 0.95;
+    letter-spacing: 0;
+}
+
+.experience-heading > p {
+    max-width: 34rem;
+    margin: 0;
+    color: var(--portfolio-muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    transform: translateY(0.5rem);
+}
+
+.experience-timeline {
+    position: relative;
+}
+
+.experience-timeline::before {
+    content: "";
+    position: absolute;
+    left: 1.65rem;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--portfolio-accent), rgb(233 243 248 / 9%) 92%);
+}
+
+.timeline-entry {
+    position: relative;
+    display: grid;
+    grid-template-columns: 3.3rem minmax(0, 1fr);
+    gap: 1.25rem;
+}
+
+.timeline-marker {
+    position: relative;
+    z-index: 1;
+    width: 3.3rem;
+    height: 3.3rem;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgb(122 230 255 / 34%);
+    border-radius: 50%;
+    background: #07131a;
+    color: var(--portfolio-accent);
+    font-family: ui-monospace, monospace;
+    font-size: 0.68rem;
+}
+
+.timeline-entry details {
+    margin-bottom: 1.25rem;
+    border: 1px solid rgb(233 243 248 / 12%);
+    border-radius: 8px;
+    background: rgb(18 30 38 / 52%);
+    overflow: hidden;
+}
+
+.timeline-entry details[open] {
+    border-color: rgb(122 230 255 / 24%);
+}
+
+.timeline-entry summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.timeline-entry summary::-webkit-details-marker {
+    display: none;
+}
+
+.timeline-entry summary:focus-visible {
+    outline: 2px solid var(--portfolio-accent);
+    outline-offset: -2px;
+}
+
+.role-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    isolation: isolate;
+    gap: 2rem;
+    padding: 1.1rem 1.75rem;
+}
+
+.timeline-entry details:not([open]) summary:hover .role-heading::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: repeating-linear-gradient(
+        118deg,
+        transparent 0 20px,
+        rgb(122 230 255 / 7%) 20px 21px,
+        transparent 21px 38px
+    );
+    background-size: 140% 100%;
+    animation: expand-lines 1.8s linear infinite;
+}
+
+.timeline-entry details:not([open]) summary:hover .role-heading {
+    background: linear-gradient(90deg, transparent 18%, rgb(122 230 255 / 3%) 76%, transparent 100%);
+}
+
+.timeline-entry details:not([open]) summary:hover .role-heading > div,
+.timeline-entry details:not([open]) summary:hover .detail-icon {
+    position: relative;
+}
+
+@keyframes expand-lines {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 42px 0;
+    }
+}
+
+.timeline-entry details[open] .role-heading::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: repeating-linear-gradient(
+        118deg,
+        transparent 0 20px,
+        rgb(122 230 255 / 5%) 20px 21px,
+        transparent 21px 38px
+    );
+}
+
+.role-period {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin: 0 0 0.6rem;
+    color: var(--portfolio-warm);
+    font-family: ui-monospace, monospace;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.role-duration {
+    border-left: 1px solid rgb(233 243 248 / 16%);
+    padding-left: 0.55rem;
+    color: var(--portfolio-muted);
+    font-size: 0.76rem;
+    font-weight: 500;
+}
+
+.role-heading h3 {
+    margin: 0;
+    color: var(--portfolio-ink);
+    font-family: var(--font-display), sans-serif;
+    font-size: clamp(1.35rem, 2.4vw, 2rem);
+    font-weight: 650;
+    line-height: 1.2;
+}
+
+.role-company {
+    margin: 0.55rem 0 0;
+    color: var(--portfolio-muted);
+    font-size: 0.88rem;
+}
+
+.role-company span {
+    color: var(--portfolio-ink);
+}
+
+.detail-icon {
+    width: 1.1rem;
+    height: 1.1rem;
+    flex: 0 0 auto;
+    margin-top: 0.25rem;
+    color: var(--portfolio-muted);
+    transition: transform 180ms ease;
+}
+
+.timeline-entry details[open] .detail-icon {
+    transform: rotate(180deg);
+}
+
+.role-details {
+    border-top: 1px solid rgb(233 243 248 / 9%);
+    padding: 1.5rem 1.75rem;
+}
+
+.role-summary {
+    margin: 0 0 1.25rem;
+    color: rgb(233 243 248 / 92%);
+    font-size: 1.08rem;
+    line-height: 1.65;
+}
+
+.role-details ul {
+    display: grid;
+    gap: 0.85rem;
+    margin: 0;
+    padding: 0;
+    color: var(--portfolio-muted);
+    list-style: none;
+}
+
+.role-details li {
+    display: grid;
+    grid-template-columns: 0.75rem minmax(0, 1fr);
+    gap: 0.4rem;
+    align-items: start;
+    line-height: 1.68;
+}
+
+.role-bullet-marker {
+    width: 0.75rem;
+    height: 2px;
+    margin-top: 0.84em;
+    background: rgb(122 230 255 / 55%);
+}
+
+.role-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.role-tags span {
+    border: 1px solid rgb(122 230 255 / 16%);
+    border-radius: 4px;
+    padding: 0.42rem 0.65rem;
+    color: var(--portfolio-accent);
+    background: rgb(122 230 255 / 5%);
+    font-family: ui-monospace, monospace;
+    font-size: 0.7rem;
+}
+
+.education-strip {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2.5rem;
+    align-items: end;
+    margin: 1.25rem 0 0 4.55rem;
+    border-top: 1px solid rgb(233 243 248 / 12%);
+    border-bottom: 1px solid rgb(233 243 248 / 12%);
+    padding: 1.1rem 0;
+}
+
+.education-strip .section-kicker {
+    margin: 0 0 0.55rem;
+}
+
+.education-strip h3 {
+    margin: 0;
+    color: var(--portfolio-ink);
+    font-family: var(--font-display), sans-serif;
+    font-size: 1.25rem;
+}
+
+.degree-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.degree-list p + p {
+    border-left: 1px solid rgb(233 243 248 / 12%);
+    padding-left: 1.5rem;
+}
+
+.education-records {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.degree-list p,
+.education-date {
+    margin: 0;
+}
+
+.degree-list strong,
+.degree-list span {
+    display: block;
+}
+
+.degree-list strong {
+    color: var(--portfolio-ink);
+    font-size: 0.9rem;
+}
+
+.degree-list span,
+.education-date {
+    color: var(--portfolio-muted);
+    font-size: 0.82rem;
+}
+
+.education-date {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    border-left: 1px solid rgb(233 243 248 / 12%);
+    padding-left: 1.5rem;
+    white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+    .experience-heading {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .experience-heading > p {
+        max-width: 42rem;
+    }
+
+    .education-strip {
+        grid-template-columns: 1fr 1.5fr;
+    }
+
+    .education-records {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .education-date {
+        align-self: start;
+        display: block;
+        border-left: 0;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .experience-container {
+        scroll-margin-top: 7.5rem;
+    }
+
+    .experience-heading {
+        margin-bottom: 3rem;
+    }
+
+    .experience-heading h2 {
+        max-width: 100%;
+        font-size: clamp(2.65rem, 12vw, 3.15rem);
+        overflow-wrap: break-word;
+    }
+
+    .experience-timeline::before {
+        left: 1.25rem;
+    }
+
+    .timeline-entry {
+        grid-template-columns: 2.5rem minmax(0, 1fr);
+        gap: 0.75rem;
+    }
+
+    .timeline-marker {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .role-heading,
+    .role-details {
+        padding: 1.25rem;
+    }
+
+    .role-heading {
+        gap: 1rem;
+    }
+
+    .education-strip {
+        grid-template-columns: 1fr;
+        margin-left: 3.25rem;
+        gap: 1.25rem;
+    }
+
+    .degree-list {
+        grid-template-columns: 1fr;
+    }
+
+    .degree-list p + p {
+        border-left: 0;
+        padding-left: 0;
+    }
+
 }

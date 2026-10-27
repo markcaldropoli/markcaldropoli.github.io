@@ -1,3 +1,17 @@
+.portfolio-header {
+  -webkit-user-select: none;
+  user-select: none;
+  background: linear-gradient(
+    to bottom,
+    rgb(2 8 13 / 88%),
+    rgb(2 8 13 / 68%)
+  );
+  border-bottom: 1px solid rgb(255 255 255 / 8%);
+  box-shadow: 0 12px 32px rgb(0 0 0 / 12%);
+  -webkit-backdrop-filter: blur(16px) saturate(125%);
+  backdrop-filter: blur(16px) saturate(125%);
+}
+
 .brand {
   -webkit-background-clip: text;
   background-clip: text;
@@ -25,6 +39,49 @@
   100% { transform: scale(1); }
 }
 
+@media (max-width: 640px) {
+  .portfolio-header {
+    background: linear-gradient(to bottom, rgb(2 8 13 / 94%), rgb(2 8 13 / 72%), transparent);
+  }
+
+  .portfolio-header > div {
+    padding-inline: 0.75rem !important;
+  }
+
+  .portfolio-header .flex.justify-between {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.75rem;
+  }
+
+  .brand {
+    max-width: 8.5rem;
+    font-size: 1.05rem;
+    line-height: 1.2;
+  }
+
+  .nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .nav button {
+    padding: 0.4rem 0.7rem !important;
+  }
+
+  .portfolio-header > div > div > div:last-child {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .social-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 .nav {
   align-items: center;
   background-color: #ffffff08;
@@ -46,11 +103,15 @@
 }
 
 .github-icon:hover {
-  background: linear-gradient(to right, black, #24292e) border-box;
-  border: 1px solid transparent;
+  background: linear-gradient(to right, #37424c, #586773) border-box;
 }
 
 .linkedin-icon:hover {
   background: linear-gradient(to right, #0a66c2, #0077B5) border-box;
+  border: 1px solid transparent;
+}
+
+.email-icon:hover {
+  background: linear-gradient(to right, #b82f28, #8f2522) border-box;
   border: 1px solid transparent;
 }
